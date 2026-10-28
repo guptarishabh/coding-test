@@ -69,6 +69,6 @@ class ProductControllerTest {
                         .contentType(MediaType.APPLICATION_JSON)
                         .content("{not json"))
                 .andExpect(status().isBadRequest())
-                .andExpect(jsonPath("$.message").value("Malformed request body"));
+                .andExpect(jsonPath("$.message").value("Malformed request"));
     }
 }
